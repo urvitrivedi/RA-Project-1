@@ -1,0 +1,386 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Index */
+/*	1.	General
+			a. Universal Selector
+			b. Heading Styles
+			c. Paragraph
+			d. Unordered List
+			e. Anchor Tag
+			f. Customized Padding for Specific Elements, Text:Uppercase, Text:Oblique
+	2.	Header
+			a. Logo
+			b. Navigation
+	3.	Banner	
+	4.	Hand Crafted Style Section
+	5.	Product Section
+	6.	Signup Section
+			a. Form
+	7.	Footer
+			a. Contact Details
+			b. Social Media
+
+	8. Media Query - Mobile version
+			a. Header
+				i.	Logo
+				ii.	Navigation
+			b. Banner
+			c. Signup Section
+				i.	Form
+			d. Footer
+				i.	Contact Details
+				ii.	Social Media
+*/
+
+/* 1. General */ 
+
+	body {
+		font-size: 14px;
+	}
+
+	h1{
+		font-weight: 100;
+		font-size: 4rem;
+	}
+
+	h2{
+		font-weight: 900;
+		font-size: 2em;
+	}
+
+	h3{
+		font-weight: 400;
+		font-size: 1.5em;
+	}
+
+	h4{
+		font-size: 1.25em;
+	}
+
+	h5{
+		font-size:0.75em;
+	}
+
+	h6{
+		font-size:1em;
+		font-weight: 400;
+	}
+
+	p{
+		font-size:1em;
+		line-height: 2em;
+	}
+
+	ul{
+		list-style: none;
+	}
+
+	li{
+		font-size:1em;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.padding-1em{
+		padding: 1em;
+	}
+
+	.padding-3em{
+		padding: 3em;
+	}
+
+	.padding-vertical-7em{
+		padding-top:7em;
+		padding-bottom: 7em;
+	}
+
+	.padding-horizontal-30em{
+		padding-left:30em;
+		padding-right:30em;
+	}
+	
+	.padding-top{
+		padding-top:2em;
+	}
+
+	.padding-vertical-small{
+		padding:0.5em 0;
+	}
+
+	.margin-btm{
+		margin-bottom: 1em;
+	}
+
+	.padding-btm{
+		padding-bottom: 1em
+	}
+
+	.uppercase{
+		text-transform: uppercase;
+	}
+
+	.text-align-center{
+		text-align: center;
+	}
+
+	.subsection-italic{
+		font-weight: 400;
+		font-style: oblique;
+	}
+
+/* 2. Header */
+
+	.logo{
+		flex-basis: 15%;
+	}
+
+/* 2b. Start Navigation */
+	nav > ul > li{
+		padding:2em 1em;
+	}
+
+	nav > ul > li > a{
+		border-bottom: 1px solid transparent;
+		transition: 0.5s ease;
+	}
+
+	nav > ul > li > a:hover,
+	nav > ul > li > a:active{
+		color:#e2574c;
+		border-bottom:1px solid #e2574c;
+	}
+
+	.cart-icon img{
+		width:50px;
+		height:50px;
+	}
+
+/* 3. Start Banner */
+	.banner{
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../images/banner-girl.png) top 5em center no-repeat, url(../images/flower-bkgd.jpg) center center no-repeat;
+		background-size: cover,contain;
+		height: 90vh;
+	}
+
+	.banner-subtitle{
+		font-weight: 600;
+	}
+
+/*  4. Start Hand Crafted Styles Section */
+	.hand-crafted-styles{
+		border-bottom: 2px solid #d7d7d7;
+	}
+
+/* 5. Start Product Section */
+
+	.product{
+	}
+
+/* 6. Start Sign-up Section */
+
+	.signup-section{
+		background: url(../images/wave-bkgd.jpg) bottom no-repeat;
+		filter:opacity(.9);
+		padding:5rem 0;
+	}
+
+	.signup-section > h2{
+		margin-top:-2em;
+	}
+		
+/* 6a. Form */
+
+	.subscribe{
+		margin-top: 1em;
+		width:600px;
+		max-width:100%;
+		background: #fff;
+		border-radius:35px;
+		padding:0.5em 0.75em;
+	}
+
+	.subscribe-input-email > input[type=text] {
+		background: rgba(255,255,255,0);
+		border:none;
+		font-size:1em;
+		padding:0 1em 0 1.5em;
+		width:30em;
+	}
+
+	.subscribe-input-email > input[type=text]:focus {
+		outline-color: transparent;
+		outline-style: none;
+	}
+
+	.button > input[type=submit]{
+		background-color: #e2574c;
+		border-style: none;
+		border-radius: 25px;
+		font-size:1em;
+		color:#fff;
+		padding:1em 3em;
+		transition: all 0.5s;
+	}
+
+		.button > input[type=submit]:focus{
+			outline-color: transparent;
+			outline-style: none;
+		}
+
+	.button > input[type=submit]:hover{
+		background-color: #969696;
+	}
+
+/* 7. Footer */
+
+	footer{
+		background: #242424;
+		border-top:#fff 0.5em solid;
+	}
+
+/* 7a. Footer Contact Details */
+	.contact{
+		font-weight: 100;
+		font-size: 1em;
+		line-height: 1.25em;
+	}
+
+	.contact ul > li{
+		text-align: left;
+		margin:1em 0;
+		color: #fff;
+	}
+
+	.contact ul > li:last-child{
+		color: #969696;
+	}
+
+/* 7b. Footer Social Media */
+	.social-media{
+		font-size:1em;
+		padding-top:1.25em;
+	}
+
+	.social-media-icons{
+		width:30%;
+		padding-bottom:0.75em;
+	}
+
+	footer .fa:hover {
+		color:#969696;
+	}
+
+	.social-media-text{
+		width:5rem;
+		padding-bottom:0.75em;
+	}
+
+	.social-media-text:hover{
+			color:#969696;
+	}
+
+/*-------------------------------------------------------------
+						Media Queries
+-------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+							Tablet
+-------------------------------------------------------------*/
+@media (min-width:641px) and (max-width:1200px){
+
+	.padding-horizontal-12em-tablet{
+		padding-left:12em;
+		padding-right:12em;
+	}
+	
+}
+
+/*-------------------------------------------------------------
+							Mobile
+-------------------------------------------------------------*/
+
+@media only screen and (max-width:640px){
+	
+/* General */
+	
+	.padding-horizontal-2em-mobile{
+		padding-left:2em;
+		padding-right:2em;
+	}
+	
+/* 8. Header */
+	
+/* 8.a.i. Logo - Mobile version */
+	
+	.logo{
+		flex-basis: 30%;
+		padding: 1em;
+	}
+	
+/* 8.a.ii. Navigation - Mobile menu */
+	nav > ul > li {
+		font-size: 0.95em;
+	  	padding: 2em 0.5em;
+	}
+	
+/* 8.b Banner - Mobile Version */	
+	.banner{
+		height: 80vh;
+	}
+	
+	.banner h1{
+		font-size:3rem ;
+	}
+	
+/* 8.c  Start Sign-up Section */
+		
+/* 8.c.i.  Form */
+
+	.subscribe{
+		width:325px;
+		max-width:100%;
+	}
+
+	.subscribe-input-email > input[type=text] {
+		padding:0 5em 0 1em;
+		width:100%;
+	}
+
+	.button > input[type=submit]{
+		padding:1em 2em;
+	}
+	
+/* 8.d  Footer */
+	
+	.flex-footer-col-ai-center{
+		flex-direction: column;
+		align-items: center;
+	}
+
+/* 8.d.i.  Footer Contact Details */
+
+	.contact ul > li{
+		text-align: center;
+	}
+
+/* 8.d.ii. Footer Social Media */
+	
+	.social-media ul{
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.social-media ul li{
+		padding:0 1em 0 1em;
+	}
+
+	.social-media-text{
+		display: none;
+	}
+	
+} /* End Mobile Version Media Query */
+
+
